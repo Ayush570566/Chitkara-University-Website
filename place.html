@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement cell</title>
+  <style>
+    body {
+      margin-right: 50px;
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+
+    /* Header Styling */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown button {
+    background-color: rgb(223, 229, 231);
+      
+      color: white;
+      padding: 0px 0px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: -7px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0px;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+
+      
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown button:hover {
+      background-color: #768d76;
+    }
+    .imgdrop{
+        width: 50px;
+        height: 40px;
+    }
+
+header {
+
+    margin: 10px 10px 10px 10px;
+
+    border-radius: 25px;
+    background-color: rgb(223, 229, 231);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: baseline;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url("assets/images/main/main-img-35.jpg") no-repeat center center/cover;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 4.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    .hero button {
+      padding: 15px 30px;
+      border: 2px solid #fff;
+      background-color: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* Sections Styling */
+    .section {
+      padding: 120px 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .section p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .collection-item {
+      background-color: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #ddd;
+      transition: transform 0.3s ease;
+    }
+
+    .collection-item:hover {
+      transform: scale(1.05);
+    }
+
+    .collection-item img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .collection-item h3 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      text-transform: uppercase;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-item {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .about-item h4 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 14px;
+      text-transform: uppercase;
+      background-color: #000;
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .mains{
+      height: 55px;
+      width: 55px;
+      
+    }
+    .d{
+      position: relative;
+    }
+    h1{
+      position: absolute;
+      top: -29px;
+      left: 58px;
+    }
+   .comp{
+    height: 700px;
+    width: 1400px;
+   }
+  </style>
+</head>
+<body>
+
+
+
+  <header>
+    <div class="logo">
+        <img class="logo" src="https://www.chitkara.edu.in/chitkara-university-logo.png" alt="logo" title="Chitkara University Logo" width="181" height="78" class="dlogo">
+    </div>
+    <div class="header-list">
+    <nav class="header-list-nav">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#Facility">Facility</a></li>
+            <li><a href="place.html">Placement</a></li>
+            <li><a href="mess/mess.html">Mess</a></li>
+            <li><a href="sports/project.html">Sports Arena</a></li>
+            <li><a href="./library.html">Library</a></li>
+            <li><a href="./campus/campus-gallery.html">Campus Gallery</a></li>
+            <li><a href="kalvium/kalvium2.html">Kalvium</a></li>
+            <li><a href="ceed1/index.html">CEED</a></li>
+            <div class="dropdown">
+                <button><img src="assets/images/main/dropdown-removebg-preview-2.png" class="imgdrop" alt=""></button>
+                <div class="dropdown-content">
+                    <a href="campus/timepass/plants.html" target="_self">Herbal Garden</a>
+                    <a href="uco/uco.html" target="_self">Uco Bank</a>
+                    <a href="kalvium/harvesting.html" target="_self">Eco-Friendly solutions</a>
+                    <a href="chainagri.html" target="_self">Chai nagri</a>
+                    <a href="mess/aryan.html" target="_self">Academic Block</a>
+                    <a href="kalvium/newvenky.html" target="_self">Venky</a>
+                    <a href="#contact" target="_self">Contact</a>
+ 
+                </div>
+              </div>
+        </ul>
+
+       
+    </nav>
+    </div>
+</header>
+
+  <!-- <header>
+    <div class="d">
+      
+   <img class="mains" src="assets/images/main/main-img-1.png">
+   <h1> Placement Cell</h1></div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+       
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header> -->
+
+  <section id="home" class="hero">
+    <div class="fade-in">
+      <h1>Placement Approved</h1>
+      
+    </div>
+  </section>
+
+  <section id="collection" class="section">
+    <h2>Student resources</h2>
+    <p>Details about internship and job opportunities, company profiles, and testimonials.</p>
+    <div class="collection-grid">
+      <div class="collection-item">
+        <img src="assets/images/main/main-img-32.jpg" alt="Collection 1">
+        <h3>Resume Building</h3>
+      </div>
+      <div class="collection-item">
+        <img src="assets/images/main/main-img-34.jpg" alt="Collection 2">
+        <h3>Personal Interviews
+        </h3>
+      </div>
+      <div class="collection-item">
+        <img src="assets/images/main/main-img-33.jpg" alt="Collection 3">
+        <h3>Skill development</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>Companies</h2>
+    <div>
+      <img class="comp" src="assets/images/main/main-img-3.png" alt="Collection 3">
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>
+     If you want to get in touch with our training and placement team, please contact:<br>
+
+Dr. Cavita Taragi<br>
+AVP, Office of External Affairs,<br>
+Chitkara University.<br>
+e-mail: cavita.taragi@chitkara.edu.in<br>
+
+
+    </p>
+  </section>
+</body>
+</html>

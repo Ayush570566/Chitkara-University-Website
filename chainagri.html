@@ -1,0 +1,554 @@
+<html>
+    <head>
+        <title>Chai Nagri</title>
+    
+        <style>
+            /* Global Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto', sans-serif;
+            }
+    
+            body {
+                background-color: #f4f4f4;
+                line-height: 1.6;
+                background-image: url('C:\Users\shiva\OneDrive\Desktop\IWT\images.jpg');
+            }
+    
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+    
+            h1, h2, h3 {
+                font-weight: 700;
+            }
+
+
+
+             /* Header Styling */
+             .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown button {
+    background-color: rgb(223, 229, 231);
+      
+      color: white;
+      padding: 0px 0px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: -7px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0px;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+
+      
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown button:hover {
+      background-color: #768d76;
+    }
+    .imgdrop{
+        width: 50px;
+        height: 40px;
+    }
+
+header {
+
+    margin: 10px 10px 10px 10px;
+
+    border-radius: 25px;
+    background-color: rgb(223, 229, 231);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: baseline;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+    
+            /* Header Styles */
+            /* header {
+                background-color: #34495e; /* Professional dark blue-gray */
+                /* color: white;
+                padding: 20px 0;
+            }
+    
+            .navbar {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }  */
+/*     
+            /* Logo ka size increase aur left side move */
+            /* .navbar .logo img {
+                height: 150px; /* Logo ka size increase */
+                /* margin-left: -200px; Logo ko left side move karna */
+            /* } */
+    
+            /* .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+            }
+    
+            .nav-links li {
+                font-size: 1.2rem;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+    
+            .nav-links a {
+                color: white;
+                text-transform: uppercase;
+                transition: color 0.3s ease;
+                padding: 10px 15px;
+                border-radius: 5px;
+            }
+    
+            .nav-links a:hover {
+                background-color: #ff6347; /* Highlight on hover */
+                /* color: #fff;
+            }  */
+    
+            /* Hero Section */
+            .hero {
+                background: url('c:\Users\shiva\Downloads\images.jpg') no-repeat center center/cover;
+                height: 100vh;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 0 20px;
+                background-image: url("assets/images/main/main-img-1.jpg");
+            }
+    
+            .hero h2 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            }
+    
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
+    
+            .cta-btn {
+                padding: 12px 30px;
+                background-color: #ff6347;
+                color: rgb(243, 243, 242);
+                border-radius: 25px;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                transition: background-color 0.3s ease;
+            }
+    
+            .cta-btn:hover {
+                background-color: #e53e3e;
+            }
+    
+            /* Menu Section */
+            #menu {
+                background-color: #fbfcf3;
+                padding: 80px 20px;
+            }
+    
+            .content-wrapper {
+                max-width: 1200px;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            .menu h2 {
+                font-size: 2.5rem;
+                margin-bottom: 40px;
+            }
+    
+            .menu-categories {
+                display: flex;
+                justify-content: space-around;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+    
+            .category {
+                background-color: #f1ecec;
+                padding: 20px;
+                border-radius: 10px;
+                width: 30%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            .category h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+    
+            .category ul {
+                list-style: none;
+                font-size: 1.1rem;
+            }
+    
+            .category ul li {
+                margin-bottom: 10px;
+            }
+    
+            /* About Section */
+            #about {
+                background-color: #ecf0f1; /* Light gray background */
+                padding: 80px 20px;
+                text-align: center;
+            }
+    
+            #about h2 {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+    
+            #about p {
+                font-size: 1.2rem;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+    
+            /* Reviews Section */
+            #reviews {
+                background-color: #fff;
+                padding: 80px 20px;
+                text-align: center;
+            }
+    
+            .review-card {
+                background-color: #f1ecec;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 45%;
+                display: inline-block;
+                text-align: left;
+            }
+    
+            .review-card p {
+                font-size: 1.1rem;
+            }
+    
+            .review-card h4 {
+                margin-top: 10px;
+                font-weight: 600;
+            }
+    
+            /* Footer Section */
+            footer {
+                background-color: #34495e; /* Same as navbar */
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin-top: 40px;
+            }
+    
+            footer p {
+                font-size: 1rem;
+            }
+    
+            /* Mobile Responsive */
+            @media (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                    text-align: center;
+                }
+    
+                .nav-links {
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 20px;
+                }
+    
+                .menu-categories {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                .category {
+                    width: 80%;
+                    margin-bottom: 20px;
+                }
+    
+                .hero h2 {
+                    font-size: 2rem;
+                }
+    
+                .review-card {
+                    width: 80%;
+                    margin: 10px 0;
+                }
+            }
+
+
+            .ico{
+                width: 100px;
+                height: 50px;
+            }
+
+
+
+
+             /* Animation */
+    .fade-in {
+      opacity: 0;
+      transform:scaleY(1);
+      transform: translateX(50px);
+      animation: fadeIn 4s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform:scaleY(1.9);
+        transform: translateX(0)
+      }
+    }
+        </style>
+    </head>
+    <body>
+   
+    
+        <header>
+            <div class="logo">
+                <img class="logo" src="https://www.chitkara.edu.in/chitkara-university-logo.png" alt="logo" title="Chitkara University Logo" width="181" height="78" class="dlogo">
+            </div>
+            <div class="header-list">
+            <nav class="header-list-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#Facility">Facility</a></li>
+                    <li><a href="place.html">Placement</a></li>
+                    <li><a href="mess/mess.html">Mess</a></li>
+                    <li><a href="sports/project.html">Sports Arena</a></li>
+                    <li><a href="./library.html">Library</a></li>
+                    <li><a href="./campus/campus-gallery.html">Campus Gallery</a></li>
+                    <li><a href="kalvium/kalvium2.html">Kalvium</a></li>
+                    <li><a href="ceed1/index.html">CEED</a></li>
+                    <div class="dropdown">
+                        <button><img src="assets/images/main/dropdown-removebg-preview-2.png" class="imgdrop" alt=""></button>
+                        <div class="dropdown-content">
+                            <a href="campus/timepass/plants.html" target="_self">Herbal Garden</a>
+                            <a href="uco/uco.html" target="_self">Uco Bank</a>
+                            <a href="kalvium/harvesting.html" target="_self">Eco-Friendly solutions</a>
+                            <a href="chainagri.html" target="_self">Chai nagri</a>
+                            <a href="mess/aryan.html" target="_self">Academic Block</a>
+                            <a href="kalvium/newvenky.html" target="_self">Venky</a>
+                            <!-- <a href="#contact" target="_self">Contact</a> -->
+         
+                        </div>
+                      </div>
+                </ul>
+    
+               
+            </nav>
+            </div>
+        </header>
+        <!-- Navigation Bar -->
+        <!-- <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img class="ico" src="assets/images/main/Chai-Nagri-Franchise-Logo-removebg-preview.png" alt="Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li> -->
+                <!-- </ul>
+            </nav>
+        </header> --> 
+    
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="fade-in">Delicious food is waiting for you.</h2>
+                <p>Order your favorite food through u-campus and enjoy your meal.</p>
+                <a href="#menu" class="cta-btn">Order Now</a>
+            </div>
+        </section>
+    
+        <!-- Menu Section -->
+        <section id="menu" class="menu">
+            <div class="content-wrapper">
+                <h2>Our Menu</h2>
+    
+                <!-- Search Bar -->
+                <input type="text" id="menuSearch" placeholder="Search Menu..." style="padding: 10px; width: 80%; margin-bottom: 20px; font-size: 1rem; border: 1px solid #ccc; border-radius: 5px;">
+                
+                <!-- Filter Buttons -->
+                <div style="margin-bottom: 20px;">
+                    <button onclick="filterMenu('all')" style="padding: 10px 20px; margin: 5px; border: none; background-color: #ff6347; color: white; border-radius: 5px;">All</button>
+                    <button onclick="filterMenu('veg')" style="padding: 10px 20px; margin: 5px; border: none; background-color: #ff6347; color: white; border-radius: 5px;">Veg Meals</button>
+                    <button onclick="filterMenu('nonveg')" style="padding: 10px 20px; margin: 5px; border: none; background-color: #ff6347; color: white; border-radius: 5px;">Non-Veg Meals</button>
+                    <button onclick="filterMenu('drinks')" style="padding: 10px 20px; margin: 5px; border: none; background-color: #ff6347; color: white; border-radius: 5px;">Drinks</button>
+                    <button onclick="filterMenu('snacks')" style="padding: 10px 20px; margin: 5px; border: none; background-color: #ff6347; color: white; border-radius: 5px;">Snacks</button>
+                    <button onclick="filterMenu('pizzas')" style="padding: 10px 20px; margin: 5px; border: none; background-color: #ff6347; color: white; border-radius: 5px;">Pizzas</button>
+                </div>
+    
+                <!-- Menu Categories -->
+                <div class="menu-categories">
+                    <div class="category" id="veg">
+                        <h3>Veg Meals</h3>
+                        <ul>
+                            <li>Chole Bhature - ₹80</li>
+                            <li>Paneer Butter Masala - ₹120</li>
+                            <li>Veg Biryani - ₹100</li>
+                            <li>Rajma chwal - ₹80</li>
+                            <li>veg pulao - ₹100</li>
+                            <li>Malai kofta - ₹120</li>
+                        </ul>
+                    </div>
+                    <div class="category" id="nonveg">
+                        <h3>Non-Veg Meals</h3>
+                        <ul>
+                            <li>Chicken Biryani - ₹150</li>
+                            <li>Butter Chicken - ₹200</li>
+                            <li>Mutton Korma - ₹250</li>
+                            <li>Tandoori chiken - ₹120</li>
+                            <li>Mutton curry - ₹180</li>
+                            <li>chiken spring roll - ₹180</li>
+                        </ul>
+                    </div>
+                    <div class="category" id="drinks">
+                        <h3>Drinks</h3>
+                        <ul>
+                            <li>Lemonade - ₹30</li>
+                            <li>Cold Coffee - ₹60</li>
+                            <li>Soft Drinks - ₹40</li>
+                            <li>Tea - ₹20</li>
+                            <li>choclate malikshake - ₹80</li>
+                            <li>Mango - ₹60</li>
+                        </ul>
+                    </div>
+                    <div class="category" id="snacks">
+                        <h3>Snacks</h3>
+                        <ul>
+                            <li>Samosa - ₹20</li>
+                            <li>Pakora - ₹40</li>
+                            <li>french fries - ₹70</li>
+                            <li>dosa - ₹80</li>
+                            <li>vada pav - ₹30</li>
+                            <li>poha - ₹60</li>
+                        </ul>
+                    </div>
+                    <div class="category" id="drinks">
+                        <h3>Sweets</h3>
+                        <ul>
+                            <li>Gulab jamun - ₹150</li>
+                            <li>Barfi - ₹320</li>
+                            <li>jalebi - ₹180</li>
+                            <li>kheer - ₹50</li>
+                            <li>Rasgulla - ₹150</li>
+                            <li>Halva - ₹80</li>
+                        </ul>
+                    </div>
+                    <div class="category" id="pizzas">
+                        <h3>Pizzas</h3>
+                        <ul>
+                            <li>Margherita Pizza - ₹150</li>
+                            <li>Veg Supreme Pizza - ₹200</li>
+                            <li>Cheese Burst Pizza - ₹250</li>
+                            <li>onion and paneer pizza-₹300</li>
+                            <li>detroit pizza - ₹200</li>
+                            <li>onion and corn pizza - ₹150</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- About Section -->
+        <section id="about">
+            <div class="content-wrapper">
+                <h2>About Us</h2>
+                <p>Welcome to Chai Nagri! We are dedicated to providing delicious food and a memorable dining experience. Whether you're looking for a quick snack or a full meal, we have something for everyone. Explore our menu and treat yourself to a delightful meal today!</p>
+            </div>
+        </section>
+    
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <div class="content-wrapper">
+                <h2>Customer Reviews</h2>
+                <div class="review-card">
+                    <p>"Chai Nagri's food is always fresh and delicious! I love their Veg Biryani."</p>
+                    <h4>- Ravi Sharma</h4>
+                </div>
+                <div class="review-card">
+                    <p>"Great place for a quick and tasty meal. The Chicken Biryani is a must-try!"</p>
+                    <h4>- Priya Verma</h4>
+                </div>
+            </div>
+        </section>
+<!--     
+        Footer -->
+        <!-- <footer>
+            <p>&copy; 2024 Chai Nagri. All Rights Reserved.</p>
+        </footer> -->
+    </body>
+    </html>

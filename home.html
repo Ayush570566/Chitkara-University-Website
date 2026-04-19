@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<style>
+    /* Style the dropdown container */
+    .dropdown {
+        /* margin-right: 50px; */
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style the button */
+    .dropdown button {
+    background-color: rgb(223, 229, 231);
+      
+      color: white;
+      padding: 0px 0px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: -7px;
+    }
+
+    /* Style the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0px;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      
+    }
+
+    /* Change link color on hover */
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+
+      
+    }
+
+    /* Show dropdown content on button hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      /* margin-left: 0px; */
+    }
+
+    /* Change button color on hover */
+    .dropdown button:hover {
+      background-color: #768d76;
+    }
+    .imgdrop{
+        width: 50px;
+        height: 40px;
+    }
+  </style>
+<body>
+    <header>
+        <div class="logo">
+            <img class="logo" src="https://www.chitkara.edu.in/chitkara-university-logo.png" alt="logo" title="Chitkara University Logo" width="181" height="78" class="dlogo">
+        </div>
+        <div class="header-list">
+        <nav class="header-list-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#Facility">Facility</a></li>
+                <li><a href="place.html">Placement</a></li>
+                <!-- <li><a href="chainagri.html">Chai nagri</a></li> -->
+                <li><a href="mess/mess.html">Mess</a></li>
+                <li><a href="sports/project.html">Sports Arena</a></li>
+                <li><a href="./library.html">Library</a></li>
+                <!-- <li><a href="mess/aryan.html">Academic Block</a></li> -->
+                <li><a href="./campus/campus-gallery.html">Campus Gallery</a></li>
+                <li><a href="kalvium/kalvium2.html">Kalvium</a></li>
+                <!-- <li><a href="campus/timepass/plants.html">Herbal Garden</a></li> -->
+                <!-- <li><a href="uco/uco.html">Uco Bank</a></li> -->
+                <li><a href="ceed1/index.html">CEED</a></li>
+                <!-- <li><a href="#contact">About Us</a></li> -->
+                <div class="dropdown">
+                    <button><img src="assets/images/main/dropdown-removebg-preview-2.png" class="imgdrop" alt=""></button>
+                    <div class="dropdown-content">
+                        <a href="campus/timepass/plants.html" target="_self">Herbal Garden</a>
+                        <a href="uco/uco.html" target="_self">Uco Bank</a>
+                        <a href="kalvium/harvesting.html" target="_self">Eco-Friendly solutions</a>
+                        <a href="chainagri.html" target="_self">Chai nagri</a>
+                        <a href="mess/aryan.html" target="_self">Academic Block</a>
+                        <a href="kalvium/newvenky.html" target="_self">Venky</a>
+                        <a href="#contact" target="_self">Contact</a>
+
+                        <!-- <a href="https://www.google.com" target="_blank">Google</a>
+                      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                      <a href="https://www.github.com" target="_blank">GitHub</a> -->
+                    </div>
+                  </div>
+            </ul>
+
+           
+        </nav>
+        </div>
+    </header>
+
+    <section class="banner" id="about">
+        <h2>Welcome to Chitkara University</h2>
+        <p>Explore your potential!</p>
+    </section>
+
+    <div class="imag">
+
+        <div class="icon">
+            <img class="icon1" src="assets/images/main/1659503334979.jpg" alt="">
+        </div>
+        <div class="info">
+            <div class="heading">EXPLORE YOUR POTENTIAL WITH <b class="m"><br>CHITKARA UNIVERSITY</b></div>
+            <div class="subheading">Located 30 kms from Chandigarh, Chitkara University offers a world of learning that will help you reach your goals. Choose from our varied industry endorsed programs. Learn from an outstanding faculty at our state-of-the-art teaching facilities. Explore unlimited opportunities to get placed with one of the 1500+ campus recruiters and meet other students with dreams as big as yours.</div>
+        </div>
+
+        <div class="ing">
+            <div >
+                <img class="width wi img1" src="assets/images/main/main-img-23.jpg" alt="">
+            </div>
+            <div>
+                <img class="width ti img2" src="assets/images/main/main-img-17.jpg" alt="">
+            </div>
+            <div>
+                <img class="width vi img3" src="assets/images/main/main-img-22.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <section class="courses" id="courses">
+        <h2>Our Courses</h2>
+        <div class="course-list">
+            <div class="course">
+                <h3>BE-CSE</h3>
+                <p>The Bachelor of Engineering in Computer Science and Engineering (B.E. CSE) is a four-year undergraduate program focused on the principles, applications, and techniques of computer science and software development.</p>
+            </div>
+            <div class="course">
+                <h3>Pharmacy</h3>
+                <p>
+                    Pharmacy is a field focused on the preparation, dispensing, and proper use of medications to ensure safe patient care. Pharmacists play a crucial role in healthcare by advising on drug interactions, dosages, and side effects. </p>
+            </div>
+            <div class="course">
+                <h3>Nursing</h3>
+                <p>Nursing is a healthcare profession focused on caring for individuals, families, and communities to help them achieve optimal health and quality of life. Nurses work closely with doctors and other healthcare professionals.</p>
+            </div>
+            <div class="course">
+                <h3>BCA</h3>
+                <p>The Bachelor of Computer Applications (BCA) is a three-year undergraduate program focused on computer science and applications. It provides foundational knowledge in programming, database management, networking, and software development..</p>
+            </div>
+        </div>
+    </section>
+
+    <h1 id="Facility" class="head">Facilities</h1>
+     <div class="cardflex">
+        <a href="./place.html">
+            <div class="card">
+                <img src="assets/images/main/main-img-33.jpg" alt="Sports Event" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Placement Cell</h2>
+                    <p class="card-description">Our Placement Cell serves as a bridge between talented students and top-tier employers. Committed to fostering career growth.</p>
+                    <button class="card-button">Learn More</button>
+                </div>
+            </div>
+            </a>
+    
+    <a href="./chainagri.html">
+        <div class="card">
+            <img src="assets/images/main/main-img-15.jpg" alt="Sports Event" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Chai nagri</h2>
+                <p class="card-description">Chai Nagri is a unique student initiative that brings the comforting experience of chai (Indian-style tea) to the heart of our university.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+        </a>
+        <a href="kalvium/newvenky.html">
+            <div class="card">
+                <img src="assets/images/main/venky3.jpeg" alt="Sports Event" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Venky</h2>
+                    <p class="card-description">Venky's, a well-known brand in processed poultry and chicken-based products, often has a presence in university as a food outlet.</p>
+                    <button class="card-button">Learn More</button>
+                </div>
+            </div>
+            </a>
+            
+
+        </div>
+        <div class="cardflex">
+
+    <a href="./mess/mess.html">
+    <div class="card">
+        <img src="assets/images/main/main-img-2.jpg" alt="Sports Event" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Mars Mess</h2>
+            <p class="card-description">The Mars Mess is the heart of campus dining, offering a welcoming space for students to enjoy a wide variety of wholesome meals.</p>
+            <button class="card-button">Learn More</button>
+        </div>
+    </div>
+    </a>
+ 
+    <a href="./sports/project.html">
+        <div class="card">
+            <img src="assets/images/main/main-img-24.jpg" alt="Sports Event" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">
+                Sports Arena
+                </h2>
+                <p class="card-description">Welcome to the Chitkara University Sports Arena, the heart of athletic excellence and student activity on campus.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+    </a>
+
+    <a href="./library.html">
+        <div class="card">
+            <img src="assets/images/main/main-img-20.jpg" alt="Sports Event" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Library</h2>
+                <p class="card-description">Explore an extensive collection of novels, short stories, and timeless classics from various genres, including romance, mystery.<p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="cardflex">
+
+    <a href="./mess/aryan.html">
+        <div class="card">
+            <img src="assets/images/mess/kalam.jpg" alt="Sports Event" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">Academic Blocks</h2>
+                <p class="card-description">The Academic Blocks are the central hubs of learning, collaboration, and academic growth at our Chitkara university.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+        </a>
+  
+<a href="./campus/campus-gallery.html">
+    <div class="card">
+        <img src="assets/images/campus/campus-img-14.jpg" alt="Campus" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Campus Gallery</h2>
+            <p class="card-description">Explore rotating exhibits that highlight cultural events, academic milestones, and offering visitors a glimpse into the dynamic spirit of campus life.<p>
+            <button class="card-button">Learn More</button>
+        </div>
+    </div>
+</a>
+<a href="./campus/timepass/plants.html">
+    <div class="card">
+        <img src="./campus/timepass/Catharanthus.jpg" alt="Sports Event" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">Harbel Garden</h2>
+            <p class="card-description">A herbal garden is a thoughtfully cultivated area dedicated to growing a variety of medicinal, aromatic, and culinary plants.</p>
+            <button class="card-button">Learn More</button>
+        </div>
+    </div>
+    </a>
+</div>
+<div class="cardflex">
+    <a href="./uco/uco.html">
+        <div class="card">
+            <img src="assets/images/uco/uco-img-4.jpg" alt="Sports Event" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">UCO Bank</h2>
+                <p class="card-description">UCO Bank at Chitkara University is dedicated to providing seamless and efficient banking services to students, faculty, and staff.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+        </a>
+   
+    <a href="./ceed1/index.html">
+        <div class="card">
+            <img src="assets/images/main/main-img-47.jpg" alt="Sports Event" class="card-image">
+            <div class="card-content">
+                <h2 class="card-title">CEED</h2>
+                <p class="card-description">The Centre for Entrepreneurship and Education Development (CEED) at Chitkara University is a platform dedicated to innovation among students.</p>
+                <button class="card-button">Learn More</button>
+            </div>
+        </div>
+        </a>
+        <a href="kalvium/harvesting.html">
+            <div class="card">
+                <img src="assets/images/main/main-img-4.png" alt="Sports Event" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Eco-Friendly solutions</h2>
+                    <p class="card-description">Chitkara University is deeply committed to implementing eco-friendly solutions as part of its sustainability vision.</p>
+                    <button class="card-button">Learn More</button>
+                </div>
+            </div>
+            </a>
+        </a>
+    </div>
+    <div class="cardflex">
+        <a href="kalvium/kalvium2.html">
+            <div class="card">
+                <img src="assets/images/main/kalvi2.jpeg" alt="Sports Event" class="card-image">
+                <div class="card-content">
+                    <h2 class="card-title">Kalvium</h2>
+                    <p class="card-description">Kalvium at Chitkara University represents a unique collaboration aimed at transforming the way computer science education is delivered.</p>
+                    <button class="card-button">Learn More</button>
+                </div>
+            </div>
+            </a>
+        </div>
+        
+</div>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: admissions@chitkara.edu.in
+
+        </p>
+        <p>Phone: Mr. Karambir Singh :+91 95011 05719</p>
+        <p>Address:Chitkara University , Baddi , Himachal Pradesh</p>
+    </section>
+
+</body>
+</html>

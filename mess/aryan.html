@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Blocks - Chitkara University</title>
+    <!-- Modern Inter and Outfit fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-grad: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --text-main: #2d3748;
+            --text-light: #4a5568;
+            --accent: #E53E3E;
+            --accent-hover: #C53030;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: var(--bg-grad); 
+            font-family: 'Inter', sans-serif; 
+            color: var(--text-main); 
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+
+        /* HEADER */
+        header {
+            margin: 20px auto;
+            max-width: 1400px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            box-shadow: var(--shadow-subtle);
+        }
+        .dlogo { width: 140px; height: auto; }
+        header nav ul { display: flex; list-style: none; gap: 24px; align-items: center; }
+        header nav ul li a { 
+            text-decoration: none; color: #1a202c; 
+            font-weight: 600; font-size: 15px; 
+            transition: color 0.3s; 
+        }
+        header nav ul li a:hover { color: var(--accent); }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown button {
+            background: transparent;
+            border: none; cursor: pointer;
+            display: flex; align-items: center;
+            padding: 5px; border-radius: 8px; transition: background 0.3s;
+        }
+        .dropdown button:hover { background: rgba(0,0,0,0.05); }
+        .imgdrop { width: 40px; height: 32px; object-fit: contain; }
+        .dropdown-content {
+            display: none; position: absolute; right: 0; top: 120%;
+            background: white; border-radius: 12px;
+            box-shadow: var(--shadow-hover); overflow: hidden;
+            min-width: 220px; z-index: 100;
+        }
+        .dropdown-content a { padding: 14px 20px; display: block; color: var(--text-main); font-weight: 500; font-size: 14px; transition: all 0.2s; }
+        .dropdown-content a:hover { background: #fdf2f2; color: var(--accent); padding-left: 25px; }
+        .dropdown:hover .dropdown-content { display: block; animation: fadeUp 0.3s ease forwards; }
+        
+        @keyframes fadeUp { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+
+        /* HERO TITLE */
+        .page-title {
+            text-align: center; margin: 60px 0 30px 0; font-size: 3.5rem; font-weight: 800;
+            background: linear-gradient(90deg, #1A202C, #E53E3E);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent; /* Fallback for the yellow warning */
+            letter-spacing: -1px;
+        }
+        .page-subtitle {
+            text-align: center; color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto 70px auto; line-height: 1.6;
+        }
+
+        /* BLOCKS */
+        .blocks-container {
+            max-width: 1200px; margin: 0 auto; padding: 20px;
+            display: flex; flex-direction: column; gap: 70px;
+        }
+
+        .block-card {
+            display: flex; align-items: stretch; gap: 50px;
+            background: var(--card-bg); backdrop-filter: blur(15px);
+            border-radius: 24px; padding: 40px; 
+            border: 1px solid rgba(255,255,255,0.7);
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative; overflow: hidden;
+        }
+        
+        .block-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 6px; height: 100%;
+            background: var(--accent); transition: width 0.3s; opacity: 0;
+        }
+
+        .block-card:nth-child(even) { flex-direction: row-reverse; }
+
+        .block-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(255,255,255, 1);
+        }
+        .block-card:hover::before { opacity: 1; }
+
+        .card-img-wrapper {
+            flex: 1; overflow: hidden; border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .block-card img.building-img {
+            width: 100%; height: 100%; min-height: 350px; object-fit: cover;
+            transition: transform 0.8s ease; display: block;
+        }
+        
+        .block-card:hover img.building-img { transform: scale(1.08); }
+
+        .card-content { flex: 1.2; display: flex; flex-direction: column; justify-content: center; }
+        .card-content h2 { font-size: 2.4rem; color: #1a202c; margin-bottom: 20px; font-weight: 800; letter-spacing: -0.5px; }
+        .card-content p.desc { font-size: 1.05rem; line-height: 1.7; color: var(--text-light); margin-bottom: 25px; }
+        
+        .features-list { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+        .features-list li {
+            position: relative; padding-left: 25px; font-size: 0.95rem; line-height: 1.6; color: var(--text-main);
+        }
+        .features-list li::before {
+            content: '✦'; position: absolute; left: 0; top: 2px; color: var(--accent); font-size: 14px;
+        }
+
+        /* NUMBER BADGE */
+        .badge {
+            display: inline-block; align-self: flex-start;
+            background: rgba(229, 62, 62, 0.1); color: var(--accent);
+            padding: 8px 18px; border-radius: 30px;
+            font-size: 0.85rem; font-weight: 600; font-family: 'Inter', sans-serif;
+            text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px;
+        }
+
+        /* FOOTER */
+        .main-footer {
+            margin-top: 100px; padding: 60px 20px;
+            background: #1a202c; color: #edf2f7; text-align: center;
+        }
+        .main-footer h4 { margin-top: 30px; font-size: 1.1rem; color: #a0aec0; letter-spacing: 2px; text-transform: uppercase; }
+        .main-footer p { font-size: 0.95rem; margin-top: 10px; color: #718096; line-height: 1.6; }
+
+        @media(max-width: 900px) {
+            .block-card, .block-card:nth-child(even) { flex-direction: column; padding: 30px; gap: 30px; }
+            .block-card img.building-img { min-height: 250px; }
+            header { flex-direction: column; gap: 15px; padding: 25px; width: 90%; }
+            header nav ul { flex-wrap: wrap; justify-content: center; }
+            .page-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img class="dlogo" src="https://www.chitkara.edu.in/chitkara-university-logo.png" alt="Chitkara University Logo">
+        </div>
+        <nav class="header-list-nav">
+            <ul>
+                <li><a href="../home.html">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#Facility">Facility</a></li>
+                <li><a href="../place.html">Placement</a></li>
+                <li><a href="../mess/mess.html">Mess</a></li>
+                <li><a href="../sports/project.html">Sports Arena</a></li>
+                <li><a href="../library.html">Library</a></li>
+                <li><a href="../campus/campus-gallery.html">Campus Gallery</a></li>
+                <li><a href="../kalvium/kalvium2.html">Kalvium</a></li>
+                <li><a href="../ceed1/index.html">CEED</a></li>
+                <div class="dropdown">
+                    <button>
+                        <img src="../assets/images/mess/dropdown-removebg-preview-4.png" class="imgdrop" alt="Menu">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../campus/timepass/plants.html">Herbal Garden</a>
+                        <a href="../uco/uco.html">Uco Bank</a>
+                        <a href="../kalvium/harvesting.html">Eco-Friendly solutions</a>
+                        <a href="../chainagri.html">Chai nagri</a>
+                        <a href="aryan.html">Academic Block</a>
+                        <a href="../kalvium/newvenky.html">Venky</a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="page-title">Educational Blocks</h1>
+    <p class="page-subtitle">Discover the state-of-the-art facilities and dedicated academic spaces designed to foster innovation, research, and holistic development.</p>
+
+    <div class="blocks-container">
+        
+        <!-- TAGORE -->
+        <article class="block-card">
+            <div class="card-img-wrapper">
+                <img src="../assets/images/mess/tagore-library.jpg.jpeg" class="building-img" alt="Tagore Library">
+            </div>
+            <div class="card-content">
+                <span class="badge">Research Hub</span>
+                <h2>Tagore Library</h2>
+                <p class="desc">Named after the renowned poet and scholar Rabindranath Tagore, the library is designed to support academic and research needs by offering access to a wide array of resources.</p>
+                <ul class="features-list">
+                    <li><strong>Books and Journals:</strong> A vast collection of academic, reference, and general books spanning various disciplines, alongside national and international journals.</li>
+                    <li><strong>E-Resources:</strong> Access to digital platforms, e-books, research papers, and online databases perfectly tailored for modern students.</li>
+                    <li><strong>Study Spaces:</strong> Well-equipped reading rooms offering a quiet and comfortable environment for focused learning.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- KALAM -->
+        <article class="block-card">
+            <div class="card-img-wrapper">
+                <img src="../assets/images/mess/kalam.jpg" class="building-img" alt="Kalam Block">
+            </div>
+            <div class="card-content">
+                <span class="badge">Innovation Center</span>
+                <h2>Kalam Block</h2>
+                <p class="desc">Named in honor of Dr. A.P.J. Abdul Kalam, the former President of India and a celebrated scientist. This block serves as a pivotal space for academic and co-curricular activities, embodying his visionary spirit.</p>
+                <ul class="features-list">
+                    <li><strong>Academic Classrooms:</strong> Equipped with modern teaching aids like smart boards, projectors, and comfortable seating arrangements.</li>
+                    <li><strong>Laboratories:</strong> Advanced labs for various engineering, sciences, and technology disciplines to provide hands-on experience.</li>
+                    <li><strong>Faculty Offices:</strong> Ensures accessibility for rigorous student mentoring and consultations.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- RJ BLOCK -->
+        <article class="block-card">
+            <div class="card-img-wrapper">
+                <img src="../assets/images/mess/mess-img-8.jpg" class="building-img" alt="Ramanujan Block">
+            </div>
+            <div class="card-content">
+                <span class="badge">Mathematics & Science</span>
+                <h2>Ramanujan Block</h2>
+                <p class="desc">Named after the legendary Indian mathematician Srinivasa Ramanujan, symbolizing academic excellence and intellectual curiosity. It houses facilities dedicated to advanced learning.</p>
+                <ul class="features-list">
+                    <li><strong>Specialized Departments:</strong> Serves as the hub for mathematics and computer science, fostering critical thinking.</li>
+                    <li><strong>Lecture Halls:</strong> State-of-the-art visual systems integrated into lecture halls to enhance experiential learning.</li>
+                    <li><strong>Research Labs:</strong> Computational studies and practical workstations designed exclusively for groundbreaking student projects.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- CV RAMAN -->
+        <article class="block-card">
+            <div class="card-img-wrapper">
+                <img src="../assets/images/mess/mess-img-7.jpg" class="building-img" alt="CV Raman Block">
+            </div>
+            <div class="card-content">
+                <span class="badge">Physics & Mechanics</span>
+                <h2>CV Raman Block</h2>
+                <p class="desc">Honoring Dr. C.V. Raman, the renowned physicist and Nobel Laureate, this block is an integral part of the campus promoting a deep research-oriented academic environment.</p>
+                <ul class="features-list">
+                    <li><strong>Engineering Focus:</strong> Houses intense focus groups related to physics and material sciences.</li>
+                    <li><strong>Research Centers:</strong> Advanced labs tailored to facilitate hands-on experiments and high-level innovation.</li>
+                    <li><strong>Smart Integration:</strong> Classrooms equipped with the latest teaching technology to bridge theoretical gaps.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- GANDHI -->
+        <article class="block-card">
+            <div class="card-img-wrapper">
+                <img src="../assets/images/mess/mess-img-6.jpg" class="building-img" alt="Gandhi Block">
+            </div>
+            <div class="card-content">
+                <span class="badge">Administration</span>
+                <h2>Gandhi Block</h2>
+                <p class="desc">The Gandhi Block acts as a core administrative and academic building. Found deeply integrated into the Chitkara University campus, it hosts vital functions required for the seamless operation of the institution.</p>
+                <ul class="features-list">
+                    <li><strong>Faculty Hub:</strong> Central location for numerous faculty lounges, student support services, and administrative staff.</li>
+                    <li><strong>Activity Hosting:</strong> Flexible spaces routinely utilized for seminars, cultural planning, and academic gatherings.</li>
+                </ul>
+            </div>
+        </article>
+
+    </div>
+
+    <footer class="main-footer">
+        <h4>Chitkara University Himachal Pradesh</h4>
+        <p>Pinjore-Barotiwala National Highway (NH-105)<br>Himachal Pradesh – 174 103</p>
+
+        <h4>Admissions Office</h4>
+        <p>Unit No. A 201-202, Elante Mall Office Complex,<br>Industrial Area, Phase 1, Chandigarh</p>
+
+        <h4>Chitkara Information Centre</h4>
+        <p>SCO 160-161, Sector 9-C<br>Chandigarh 160 009</p>
+    </footer>
+
+</body>
+</html>

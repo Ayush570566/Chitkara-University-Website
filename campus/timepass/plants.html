@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Plants - Your Garden Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8f0;
+        }
+        .herbal {
+            background-color: #2c5a2e;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+        .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown button {
+    background-color: rgb(223, 229, 231);
+      
+      color: white;
+      padding: 0px 0px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: -7px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0px;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+
+      
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown button:hover {
+      background-color: #768d76;
+    }
+    .imgdrop{
+        width: 50px;
+        height: 40px;
+    }
+
+header {
+
+    margin: 10px 10px 10px 10px;
+
+    border-radius: 25px;
+    background-color: rgb(223, 229, 231);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: baseline;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        .plant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2em;
+            padding: 2em;
+        }
+        .plant-card {
+            background: white;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #2c5a2e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .im{
+            height: 200px;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow:4px 4px 20px 1px;
+        }
+    </style>
+</head>
+<body>
+  
+    
+    <header>
+        <div class="logo">
+            <img class="logo" src="https://www.chitkara.edu.in/chitkara-university-logo.png" alt="logo" title="Chitkara University Logo" width="181" height="78" class="dlogo">
+        </div>
+        <div class="header-list">
+        <nav class="header-list-nav">
+            <ul>
+                <li><a href="../../home.html">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#Facility">Facility</a></li>
+                <li><a href="../../place.html">Placement</a></li>
+                <li><a href="../../mess/mess.html">Mess</a></li>
+                <li><a href="../../sports/project.html">Sports Arena</a></li>
+                <li><a href="../../l.html">Library</a></li>
+                <li><a href="../a.html">Campus Gallery</a></li>
+                <li><a href="../../kalvium/kalvium2.html">Kalvium</a></li>
+                <li><a href="../../ceed1/index.html">CEED</a></li>
+                <div class="dropdown">
+                    <button><img src="./dropdown-removebg-preview.png" class="imgdrop" alt=""></button>
+                    <div class="dropdown-content">
+                        <a href="plants.html" target="_self">Herbal Garden</a>
+                        <a href="../../uco/uco.html" target="_self">Uco Bank</a>
+                        <a href="../../kalvium/harvesting.html" target="_self">Eco-Friendly solutions</a>
+                        <a href="../../chainagri.html" target="_self">Chai nagri</a>
+                        <a href="../../mess/aryan.html" target="_self">Academic Block</a>
+                        <a href="../../kalvium/newvenky.html" target="_self">Venky</a>
+                        <a href="#contact" target="_self">Contact</a>
+     
+                    </div>
+                  </div>
+            </ul>
+
+           
+        </nav>
+        </div>
+    </header>
+
+    <div class="herbal">
+        <h1>Herbal Garden</h1>
+        <p>Your Complete Guide to Indoor and Outdoor Plants</p>
+    </div>
+   
+
+    <main>
+        <section id="featured">
+            <h2 style="text-align: center;">Featured Plants</h2>
+            <div class="plant-grid">
+                <article class="plant-card">
+                    <img class="im" src="./Rose.jpg" alt="Rose">
+                    <h3>Rose</h3>
+                    <p>Roses are popular flowering shrubs with thorny stems and fragrant blooms in various colors. 
+                    They are widely cultivated for their beauty and used in perfumes, decorations, and more.</p>
+                </article>
+
+                <article class="plant-card">
+                    <img class="im" src="./Aak.jpg" alt="Aak">
+                    <h3>Aak (Calotropis procera)</h3>
+                    <p>Aak (Calotropis procera) is a common plant in India, often found in arid and semi-arid regions. 
+                       It's known for its milky sap and distinctive flowers. While some parts are toxic, it has traditional medicinal uses in Ayurveda.</p>
+                </article>
+
+                <article class="plant-card">
+                    <img class="im" src="./Bhringraj.jpg" alt="Bhringraj">
+                    <h3>Bhringraj</h3>
+                    <p>Bhringraj, also known as False Daisy, is an Ayurvedic herb renowned for its hair-nourishing properties. 
+                     It's used in various hair care products to promote hair growth, prevent premature greying, and treat scalp issues like dandruff.</p>
+                </article>
+
+                <article class="plant-card">
+                    <img class="im" src="./Catharanthus.jpg" alt="Catharanthus">
+                    <h3>Catharanthus</h3>
+                    <p>Catharanthus, also known as periwinkle, is a genus of flowering plants.
+                        One of its most famous species, Catharanthus roseus, is a source of important cancer-fighting drugs like vincristine and vinblastine.
+                         It's also a popular ornamental plant due to its beautiful, colorful flowers.
+                     </p>
+                </article>
+
+                <article class="plant-card">
+                    <img class="im" src="./Hari Elaichi.jpg" alt="Hari Elaichi">
+                    <h3>Hari Elaichi</h3>
+                    <p>Hari Elaichi, or Green Cardamom, is a popular spice known for its distinctive aroma and flavor.
+                       It's commonly used in Indian cuisine, especially in biryanis, curries, and desserts. Green cardamom also has medicinal properties and is often used in Ayurvedic remedies.</p>
+                </article>
+
+                <article class="plant-card">
+                    <img class="im" src="./Hing.jpg" alt="Hing">
+                    <h3>Hing</h3>
+                    <p>Hing, also known as Asafoetida, is a pungent spice derived from the dried latex of a plant species. 
+                        It's a key ingredient in Indian cuisine, used to enhance the flavor of curries, dals, and other dishes.
+                         While it has a strong odor, it adds a unique taste and is often used in small quantities.</p>
+                </article>
+
+                <article class="plant-card">
+                    <img class="im" src="./Kala Bansa.jpg" alt="Kala Bansa">
+                    <h3>Kala Bansa</h3>
+                    <p>Kala Bansa, also known as Barleria Prionitis, is a medicinal plant used in Ayurveda.
+                         It's particularly beneficial for respiratory health, helping to relieve cough, bronchitis, and asthma.
+                          Its soothing properties help reduce respiratory spasms and make expectoration easier.</p>
+                </article>
+
+                <article class="plant-card">
+                    <img class="im" src="./Safed Musli.jpg" alt="Safed Musli">
+                    <h3>Safed Musli</h3>
+                    <p>Safed Musli, also known as "White Gold," is a rare Indian herb with a long history of use in Ayurveda.
+                        It's prized for its potential to boost libido, improve sexual performance, and enhance overall vitality.
+                        It's also believed to have anti-inflammatory and anti-stress properties. </p>
+                </article>
+
+                
+               
+                
+            </div>
+        
+       
+    </main>
+
+    
+        <center>
+	
+			
+		</div>
+		<div id="contact" class="content">
+			<h4>CHITKARA UNIVERSITY HIMACHAL PRADESH</h4>
+			<p>Pinjore-Barotiwala National Highway (NH-105)<br>Himachal Pradesh – 174 103</p>
+
+			<h4>ADMISSIONS OFFICE</h4>
+			<p>Unit No. A 201-202, Elante Mall Office Complex,<br>Industrial Area, Phase 1, Chandigarh</p>
+
+			<h4>CHITKARA INFORMATION CENTRE</h4>
+			<p>SCO 160-161, Sector 9-C<br>Chandigarh 160 009</p>
+		</div>
+	</div></center><br><br>
+
+</body>
+</html>
